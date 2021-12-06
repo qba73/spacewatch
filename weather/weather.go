@@ -96,19 +96,14 @@ type Client struct {
 	HTTPClient *http.Client
 }
 
-// NewFromEnv returns a new weather client with
-// the API KEY read from the ENV Var `WEATHERBIT_KEY`.
+// NewFromEnv knows how to create a new weather client.
+// It requires a valid API KEY to be exported as
+// the ENV Var: WEATHERBIT_KEY.
 //
 // To read more how to get the API KEY checkout
 // waeatherbit docs: https://www.weatherbit.io/api
 func NewFromEnv() *Client {
-	return &Client{
-		BaseURL: "https://api.weatherbit.io",
-		APIKey:  os.Getenv("WEATHERBIT_KEY"),
-		HTTPClient: &http.Client{
-			Timeout: time.Second * 10,
-		},
-	}
+	return New(os.Getenv("WEATHERBIT_KEY"))
 }
 
 // New knows how to create a new weather client.
@@ -121,19 +116,18 @@ func New(apikey string) *Client {
 		BaseURL: "https://api.weatherbit.io",
 		APIKey:  apikey,
 		HTTPClient: &http.Client{
-			Timeout: time.Second * 5,
+			Timeout: time.Second * 10,
 		},
 	}
 }
 
 // Get returns weather condition for the given geographcal position.
 func (c Client) Get(l Location) (Condition, error) {
-	url := fmt.Sprintf("%s/v2/current?lat=%.4f&lon=%.4f&key=%s", c.BaseURL, l.Lat, l.Long, c.APIKey)
+	url := fmt.Sprintf("%s/v2.0/current?lat=%.4f&lon=%.4f&key=%s", c.BaseURL, l.Lat, l.Long, c.APIKey)
 	req, err := http.NewRequest(http.MethodGet, url, nil)
 	if err != nil {
 		return Condition{}, err
 	}
-
 	res, err := c.HTTPClient.Do(req)
 	if err != nil {
 		return Condition{}, err
@@ -143,7 +137,6 @@ func (c Client) Get(l Location) (Condition, error) {
 	if res.StatusCode != http.StatusOK {
 		return Condition{}, fmt.Errorf("error getting information from weather api: %v", err)
 	}
-
 	return parseResponse(res.Body)
 }
 
@@ -183,4 +176,17 @@ func parseResponse(r io.Reader) (Condition, error) {
 		Clouds:    res.Data[0].Clouds,
 	}
 	return cc, nil
+}
+
+// GetCondition takes latitude and longitude and returns
+// current weather condition for the provided location coords.
+//
+// GetCondition uses a default weather client that reads API KEY
+// from the Env Var: WEATHERBIT_KEY.
+//
+// To read more how to get the API KEY checkout
+// waeatherbit docs: https://www.weatherbit.io/api
+func GetCondition(lat, long float64) (Condition, error) {
+	l := Location{Lat: lat, Long: long}
+	return NewFromEnv().Get(l)
 }

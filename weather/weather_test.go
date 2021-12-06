@@ -68,7 +68,7 @@ func verifyURIs(wantURI, gotURI string, t *testing.T) {
 func TestWeatherCloudCoverage(t *testing.T) {
 	t.Parallel()
 
-	ts := newTestServer("testdata/response-weatherbit.json", "/v2/current?lat=-12.3387&lon=-111.7409&key=APIKEY123", t)
+	ts := newTestServer("testdata/response-weatherbit.json", "/v2.0/current?lat=-12.3387&lon=-111.7409&key=APIKEY123", t)
 	defer ts.Close()
 
 	client := weather.New("APIKEY123")
