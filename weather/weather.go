@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"os"
 	"time"
 )
 
@@ -16,7 +15,7 @@ type response struct {
 		Rh           float64 `json:"rh"`
 		Pod          string  `json:"pod"`
 		Lon          float64 `json:"lon"`
-		Pres         int     `json:"pres"`
+		Pres         float64 `json:"pres"`
 		Timezone     string  `json:"timezone"`
 		ObTime       string  `json:"ob_time"`
 		CountryCode  string  `json:"country_code"`
@@ -28,20 +27,20 @@ type response struct {
 		WindSpd      float64 `json:"wind_spd"`
 		WindCdirFull string  `json:"wind_cdir_full"`
 		WindCdir     string  `json:"wind_cdir"`
-		Slp          int     `json:"slp"`
-		Vis          int     `json:"vis"`
-		HAngle       int     `json:"h_angle"`
+		Slp          float64 `json:"slp"`
+		Vis          float64 `json:"vis"`
+		HAngle       float64 `json:"h_angle"`
 		Sunset       string  `json:"sunset"`
 		Dni          float64 `json:"dni"`
 		Dewpt        float64 `json:"dewpt"`
-		Snow         int     `json:"snow"`
+		Snow         float64 `json:"snow"`
 		Uv           float64 `json:"uv"`
-		Precip       int     `json:"precip"`
-		WindDir      int     `json:"wind_dir"`
+		Precip       float64 `json:"precip"`
+		WindDir      float64 `json:"wind_dir"`
 		Sunrise      string  `json:"sunrise"`
 		Ghi          float64 `json:"ghi"`
 		Dhi          float64 `json:"dhi"`
-		Aqi          int     `json:"aqi"`
+		Aqi          float64 `json:"aqi"`
 		Lat          float64 `json:"lat"`
 		Weather      struct {
 			Icon        string `json:"icon"`
@@ -55,16 +54,16 @@ type response struct {
 		AppTemp   float64 `json:"app_temp"`
 	} `json:"data"`
 	Minutely []struct {
-		TimestampUtc   string `json:"timestamp_utc"`
-		Snow           int    `json:"snow"`
-		Temp           int    `json:"temp"`
-		TimestampLocal string `json:"timestamp_local"`
-		Ts             int    `json:"ts"`
-		Precip         int    `json:"precip"`
+		TimestampUtc   string  `json:"timestamp_utc"`
+		Snow           float64 `json:"snow"`
+		Temp           float64 `json:"temp"`
+		TimestampLocal string  `json:"timestamp_local"`
+		Ts             float64 `json:"ts"`
+		Precip         float64 `json:"precip"`
 	} `json:"minutely"`
 }
 
-// Conditions represents information about
+// Condition represents information about
 // weather status (cloud coverage) for the
 // given lat and long coordinates in the
 // given timezone.
@@ -83,7 +82,7 @@ type Condition struct {
 	Clouds int
 }
 
-// Position holds information about latitude and longitude.
+// Location holds information about latitude and longitude.
 type Location struct {
 	Lat  float64
 	Long float64
@@ -94,16 +93,6 @@ type Client struct {
 	BaseURL    string
 	APIKey     string
 	HTTPClient *http.Client
-}
-
-// NewFromEnv knows how to create a new weather client.
-// It requires a valid API KEY to be exported as
-// the ENV Var: WEATHERBIT_KEY.
-//
-// To read more how to get the API KEY checkout
-// waeatherbit docs: https://www.weatherbit.io/api
-func NewFromEnv() *Client {
-	return New(os.Getenv("WEATHERBIT_KEY"))
 }
 
 // New knows how to create a new weather client.
@@ -121,7 +110,7 @@ func New(apikey string) *Client {
 	}
 }
 
-// Get returns weather condition for the given geographcal position.
+// Get returns weather condition for the given geographical position.
 func (c Client) Get(l Location) (Condition, error) {
 	url := fmt.Sprintf("%s/v2.0/current?lat=%.4f&lon=%.4f&key=%s", c.BaseURL, l.Lat, l.Long, c.APIKey)
 	req, err := http.NewRequest(http.MethodGet, url, nil)
@@ -176,17 +165,4 @@ func parseResponse(r io.Reader) (Condition, error) {
 		Clouds:    res.Data[0].Clouds,
 	}
 	return cc, nil
-}
-
-// GetCondition takes latitude and longitude and returns
-// current weather condition for the provided location coords.
-//
-// GetCondition uses a default weather client that reads API KEY
-// from the Env Var: WEATHERBIT_KEY.
-//
-// To read more how to get the API KEY checkout
-// waeatherbit docs: https://www.weatherbit.io/api
-func GetCondition(lat, long float64) (Condition, error) {
-	l := Location{Lat: lat, Long: long}
-	return NewFromEnv().Get(l)
 }
