@@ -1,0 +1,529 @@
+{
+    "count": 1,
+    "data": [
+        {
+            "rh": 69.0625,
+            "pod": "d",
+            "lon": -111.74,
+            "pres": 1015,
+            "timezone": "Pacific\/Easter",
+            "ob_time": "2021-12-04 16:19",
+            "country_code": "CL",
+            "clouds": 83,
+            "ts": 1638634758,
+            "solar_rad": 300.9,
+            "state_code": "",
+            "city_name": "Остров Пасхи",
+            "wind_spd": 8.13598,
+            "wind_cdir_full": "east",
+            "wind_cdir": "E",
+            "slp": 1015,
+            "vis": 24,
+            "h_angle": -15,
+            "sunset": "23:56",
+            "dni": 615.11,
+            "dewpt": 17.3,
+            "snow": 0,
+            "uv": 2.92002,
+            "precip": 0,
+            "wind_dir": 85,
+            "sunrise": "11:47",
+            "ghi": 522.93,
+            "dhi": 199.07,
+            "aqi": 27,
+            "lat": -12.34,
+            "weather": {
+                "icon": "c02d",
+                "code": 802,
+                "description": "Scattered Clouds"
+            },
+            "datetime": "2021-12-04:16",
+            "temp": 23.3,
+            "station": "SEGS",
+            "elev_angle": 38.66,
+            "app_temp": 23.5
+        }
+    ],
+    "minutely": [
+        {
+            "timestamp_utc": "2021-12-04T16:35:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:35:00",
+            "ts": 1638635700,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:36:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:36:00",
+            "ts": 1638635760,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:37:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:37:00",
+            "ts": 1638635820,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:38:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:38:00",
+            "ts": 1638635880,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:39:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:39:00",
+            "ts": 1638635940,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:40:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:40:00",
+            "ts": 1638636000,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:41:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:41:00",
+            "ts": 1638636060,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:42:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:42:00",
+            "ts": 1638636120,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:43:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:43:00",
+            "ts": 1638636180,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:44:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:44:00",
+            "ts": 1638636240,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:45:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:45:00",
+            "ts": 1638636300,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:46:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:46:00",
+            "ts": 1638636360,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:47:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:47:00",
+            "ts": 1638636420,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:48:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:48:00",
+            "ts": 1638636480,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:49:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:49:00",
+            "ts": 1638636540,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:50:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:50:00",
+            "ts": 1638636600,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:51:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:51:00",
+            "ts": 1638636660,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:52:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:52:00",
+            "ts": 1638636720,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:53:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:53:00",
+            "ts": 1638636780,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:54:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:54:00",
+            "ts": 1638636840,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:55:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:55:00",
+            "ts": 1638636900,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:56:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:56:00",
+            "ts": 1638636960,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:57:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:57:00",
+            "ts": 1638637020,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:58:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:58:00",
+            "ts": 1638637080,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T16:59:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T11:59:00",
+            "ts": 1638637140,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:00:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:00:00",
+            "ts": 1638637200,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:01:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:01:00",
+            "ts": 1638637260,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:02:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:02:00",
+            "ts": 1638637320,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:03:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:03:00",
+            "ts": 1638637380,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:04:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:04:00",
+            "ts": 1638637440,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:05:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:05:00",
+            "ts": 1638637500,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:06:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:06:00",
+            "ts": 1638637560,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:07:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:07:00",
+            "ts": 1638637620,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:08:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:08:00",
+            "ts": 1638637680,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:09:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:09:00",
+            "ts": 1638637740,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:10:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:10:00",
+            "ts": 1638637800,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:11:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:11:00",
+            "ts": 1638637860,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:12:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:12:00",
+            "ts": 1638637920,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:13:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:13:00",
+            "ts": 1638637980,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:14:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:14:00",
+            "ts": 1638638040,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:15:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:15:00",
+            "ts": 1638638100,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:16:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:16:00",
+            "ts": 1638638160,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:17:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:17:00",
+            "ts": 1638638220,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:18:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:18:00",
+            "ts": 1638638280,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:19:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:19:00",
+            "ts": 1638638340,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:20:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:20:00",
+            "ts": 1638638400,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:21:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:21:00",
+            "ts": 1638638460,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:22:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:22:00",
+            "ts": 1638638520,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:23:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:23:00",
+            "ts": 1638638580,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:24:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:24:00",
+            "ts": 1638638640,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:25:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:25:00",
+            "ts": 1638638700,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:26:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:26:00",
+            "ts": 1638638760,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:27:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:27:00",
+            "ts": 1638638820,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:28:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:28:00",
+            "ts": 1638638880,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:29:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:29:00",
+            "ts": 1638638940,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:30:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:30:00",
+            "ts": 1638639000,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:31:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:31:00",
+            "ts": 1638639060,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:32:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:32:00",
+            "ts": 1638639120,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:33:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:33:00",
+            "ts": 1638639180,
+            "precip": 0
+        },
+        {
+            "timestamp_utc": "2021-12-04T17:34:00",
+            "snow": 0,
+            "temp": 9992,
+            "timestamp_local": "2021-12-04T12:34:00",
+            "ts": 1638639240,
+            "precip": 0
+        }
+    ]
+}
