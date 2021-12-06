@@ -1,4 +1,6 @@
-
+![Go](https://github.com/qba73/spacewatch/workflows/Go/badge.svg)
+![GitHub](https://img.shields.io/github/license/qba73/meteo)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/qba73/meteo)
 
 # spacewatch
 
