@@ -44,7 +44,8 @@ func run() error {
 
 	if err := conf.Parse(os.Args[1:], "SPACEWATCH", &cfg); err != nil {
 		if err == conf.ErrHelpWanted {
-			usage, err := conf.Usage("SPACEWATCH", &cfg)
+			var usage string
+			usage, err = conf.Usage("SPACEWATCH", &cfg)
 			if err != nil {
 				return fmt.Errorf("generating config usage: %w", err)
 			}
