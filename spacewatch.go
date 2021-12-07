@@ -30,6 +30,7 @@ func isVisible(cloudCoverage int, dayPart string) bool {
 	return cloudCoverage <= 30 && dayPart == "d"
 }
 
+// Location holds coordinates information.
 type Location struct {
 	Lat  float64
 	Long float64
@@ -48,6 +49,13 @@ func GetISSLocation() (Location, error) {
 	return p, nil
 }
 
+// GetISSStatus holds the core logic used for generating
+// ISS  status update. It takes APIKEY required by the undelying
+// weather service and return the Status struct, or error
+// if any of the internal operation fail.
+//
+// GetISSStatus leverages deafult clients for ISS location
+// and weather status.
 func GetISSStatus(apikey string) (Status, error) {
 	loc, err := GetISSLocation()
 	if err != nil {
