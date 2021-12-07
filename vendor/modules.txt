@@ -9,6 +9,10 @@ github.com/google/go-cmp/cmp/internal/diff
 github.com/google/go-cmp/cmp/internal/flags
 github.com/google/go-cmp/cmp/internal/function
 github.com/google/go-cmp/cmp/internal/value
+# github.com/victorspringer/http-cache v0.0.0-20190721184638-fe78e97af707
+## explicit
+github.com/victorspringer/http-cache
+github.com/victorspringer/http-cache/adapter/memory
 # golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
 ## explicit; go 1.11
 golang.org/x/xerrors
