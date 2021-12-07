@@ -36,6 +36,7 @@ func run() error {
 			ReadTimeout     time.Duration `conf:"default:5s"`
 			WriteTimeout    time.Duration `conf:"default:5s"`
 			ShutdownTimeout time.Duration `conf:"default:5s"`
+			CacheTTL        time.Duration `conf:"default:10s"`
 		}
 		Weather struct {
 			ApiKey string `conf:",noprint"`
@@ -67,6 +68,12 @@ func run() error {
 	}
 	log.Printf("main : Config :\n%v\n", cfgOut)
 
+	// Server-side caching
+	cache, err := spacewatch.NewCacheClient(cfg.Web.CacheTTL)
+	if err != nil {
+		return fmt.Errorf("creating cache client: %v", err)
+	}
+
 	issHandler := spacewatch.ISSStatusHandler{
 		ApiKey:        cfg.Weather.ApiKey,
 		Log:           log,
@@ -75,7 +82,7 @@ func run() error {
 
 	api := http.Server{
 		Addr:         cfg.Web.Address,
-		Handler:      http.HandlerFunc(issHandler.Get),
+		Handler:      cache.Middleware(http.HandlerFunc(issHandler.Get)),
 		ReadTimeout:  cfg.Web.ReadTimeout,
 		WriteTimeout: cfg.Web.WriteTimeout,
 	}

@@ -2,11 +2,16 @@ package spacewatch
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/qba73/spacewatch/iss"
 	"github.com/qba73/spacewatch/weather"
+
+	cache "github.com/victorspringer/http-cache"
+	"github.com/victorspringer/http-cache/adapter/memory"
 )
 
 // Status represents the ISS status report.
@@ -105,4 +110,30 @@ func (s *ISSStatusHandler) Get(w http.ResponseWriter, r *http.Request) {
 	if _, err := w.Write(data); err != nil {
 		s.Log.Printf("error writing weather report: %v", err)
 	}
+}
+
+// =======================================================
+// Server-side Caching
+
+// NewCacheClient knows how to construct default in-memory
+// cache with the specified TTL parameter.
+func NewCacheClient(ttl time.Duration) (*cache.Client, error) {
+	memcached, err := memory.NewAdapter(
+		memory.AdapterWithAlgorithm(memory.LRU),
+		memory.AdapterWithCapacity(10000000),
+	)
+	if err != nil {
+		return nil, fmt.Errorf("creating memory cache adapter: %v", err)
+	}
+
+	cacheClient, err := cache.NewClient(
+		cache.ClientWithAdapter(memcached),
+		cache.ClientWithTTL(ttl),
+		cache.ClientWithRefreshKey("opn"),
+	)
+	if err != nil {
+		return nil, fmt.Errorf("creating cache client: %v", err)
+	}
+
+	return cacheClient, nil
 }
