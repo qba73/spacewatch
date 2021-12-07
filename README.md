@@ -10,7 +10,7 @@ The [International Space Station](https://en.wikipedia.org/wiki/International_Sp
 The **Spacewatch service** is a REST API that provides functionality for tracking the International Space Station. The service's primary function is to provide information if the ISS is visible in the sky at the given moment.
 We assume the ISS is visible if both conditions are satisfied: the sky cloud coverage is less than 30%, and it is nighttime.
 
-**Note:** The service is under development, and it is not intended for production usage.
+**Note:** The service is under development, and it is not intended for production use.
 
 
 # development
@@ -69,8 +69,13 @@ Received payload:
 
 - implement server-side caching (minimize load on third party services)
 - replace weather provider (currently there are limitations with no of requests)
-- add [Caddy server](https://caddyserver.com) as a proxy in front of the service (TLS, requests limiting)
-- add healthcheck endpoint
-- add request tracing and gather metrics ([Prometheus](https://prometheus.io/docs/instrumenting/clientlibs/))
+- add [Caddy server](https://caddyserver.com) as a proxy in front of the service (TLS, request rate limiting)
+- add a healthcheck endpoint
+- add request tracing and metrics ([Prometheus](https://prometheus.io/docs/instrumenting/clientlibs/))
 - use context for requests cancellations
 - implement middleware (and move logging functionality)
+- configure autodeployment (GitHub Actions)
+- register the service in the [RapidAPI](https://rapidapi.com/products/enterprise-hub/) for public use
+
+# tbd
+- add gRPC interface
