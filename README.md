@@ -33,15 +33,15 @@ run                  Run service locally
 ```
 $ make run
 go run cmd/spacewatch-api/main.go
-SPACEWATCH : 2021/12/07 07:54:59.397228 main.go:61: main : Started
-SPACEWATCH : 2021/12/07 07:54:59.397403 main.go:68: main : Config :
+SPACEWATCH : 2021/12/07 16:56:28.966230 main.go:62: main : Started
+SPACEWATCH : 2021/12/07 16:56:28.966388 main.go:69: main : Config :
 --web-address=localhost:9000
 --web-read-timeout=5s
 --web-write-timeout=5s
 --web-shutdown-timeout=5s
+--web-cache-ttl=10s
 
-SPACEWATCH : 2021/12/07 07:54:59.397463 main.go:89: main : Spacewatch API listening on localhost:9000
-
+SPACEWATCH : 2021/12/07 16:56:29.024535 main.go:96: main : Spacewatch API listening on localhost:9000
 ```
 
 ### Test the service:
@@ -67,15 +67,15 @@ Received payload:
 
 # roadmap
 
-- implement server-side caching (minimize load on third party services)
-- replace weather provider (currently there are limitations with no of requests)
-- add [Caddy server](https://caddyserver.com) as a proxy in front of the service (TLS, request rate limiting)
-- add a healthcheck endpoint
-- add request tracing and metrics ([Prometheus](https://prometheus.io/docs/instrumenting/clientlibs/))
-- use context for requests cancellations
-- implement middleware (and move logging functionality)
-- configure autodeployment (GitHub Actions)
-- register the service in the [RapidAPI](https://rapidapi.com/products/enterprise-hub/) for public use
+- [x] implement server-side caching (minimize load on third party services)
+- [ ] replace weather provider (currently there are limitations with no of requests)
+- [ ] add [Caddy server](https://caddyserver.com) as a proxy in front of the service (TLS, request rate limiting)
+- [ ] add a healthcheck endpoint
+- [ ] add request tracing and metrics ([Prometheus](https://prometheus.io/docs/instrumenting/clientlibs/))
+- [ ] use context for requests cancellations
+- [ ] implement middleware (and move logging functionality)
+- [ ] configure autodeployment (GitHub Actions)
+- [ ] register the service in the [RapidAPI](https://rapidapi.com/products/enterprise-hub/) for public use
 
 # tbd
 - add gRPC interface
