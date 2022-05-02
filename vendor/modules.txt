@@ -1,8 +1,8 @@
 # github.com/ardanlabs/conf v1.5.0
 ## explicit; go 1.13
 github.com/ardanlabs/conf
-# github.com/google/go-cmp v0.5.7
-## explicit; go 1.11
+# github.com/google/go-cmp v0.5.8
+## explicit; go 1.13
 github.com/google/go-cmp/cmp
 github.com/google/go-cmp/cmp/cmpopts
 github.com/google/go-cmp/cmp/internal/diff
@@ -13,7 +13,3 @@ github.com/google/go-cmp/cmp/internal/value
 ## explicit
 github.com/victorspringer/http-cache
 github.com/victorspringer/http-cache/adapter/memory
-# golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
-## explicit; go 1.11
-golang.org/x/xerrors
-golang.org/x/xerrors/internal
