@@ -18,7 +18,7 @@ We assume the ISS is visible if both conditions are satisfied: the sky cloud cov
 To use the service at the moment, you need to register at [Weatherbit.io](https://www.weatherbit.io/api) to get an API KEY. Once you get the key, you need to export it as an Env Var ```SPACEWATCH_WEATHER_API_KEY```
 
 
-### Make targets useful for developemnt and testing:
+### Make targets useful for development and testing:
 ```
 $ make
 vet                  Run go vet and shadow
