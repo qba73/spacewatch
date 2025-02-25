@@ -1,22 +1,24 @@
-name: Go
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+# Based on https://github.com/mvdan/github-actions-golang
+on: [push, pull_request, workflow_dispatch]
+name: Tests
 jobs:
-
-  build:
+  test:
+    strategy:
+      matrix:
+        go-version: ['1.22.x', '1.23.x', '1.24.x']
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/setup-go@v4
+        with:
+          go-version: ${{ matrix.go-version }}
+      - uses: actions/checkout@v3
+      - run: go test -v ./...
+  gocritic:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Set up Go
-      uses: actions/setup-go@v2
-      with:
-        go-version: 1.19
-
-    - name: Test
-      run: go test -v ./...
+      - uses: actions/setup-go@v4
+      - uses: actions/checkout@v3
+      - run: |
+          go install github.com/go-critic/go-critic/cmd/gocritic@latest
+          gocritic check .
