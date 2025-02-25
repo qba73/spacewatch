@@ -3,7 +3,7 @@
 ![GitHub](https://img.shields.io/github/license/qba73/meteo)
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/qba73/meteo)
 
-# spacewatch
+# Spacewatch
 
 The [International Space Station](https://en.wikipedia.org/wiki/International_Space_Station) is a modular space station in low Earth orbit. It is a multinational collaborative project involving five participating space agencies: NASA, Roscosmos, JAXA, ESA, and CSA. The ownership and use of the space station is established by intergovernmental treaties and agreements.
 
@@ -13,7 +13,7 @@ We assume the ISS is visible if both conditions are satisfied: the sky cloud cov
 **Note:** The service is under development, and it is not intended for production use.
 
 
-# development
+## Development
 
 To use the service at the moment, you need to register at [Weatherbit.io](https://www.weatherbit.io/api) to get an API KEY. Once you get the key, you need to export it as an Env Var ```SPACEWATCH_WEATHER_API_KEY```
 
@@ -65,7 +65,7 @@ Received payload:
 - day_part - is it day or night in the timezone
 - is_visible - indicates if the ISS can be seen on the sky (cloud coverage <= 30% and night)
 
-# roadmap
+## Roadmap
 
 - [x] implement server-side caching (minimize load on third party services)
 - [ ] replace weather provider (currently there are limitations with no of requests)
@@ -76,6 +76,3 @@ Received payload:
 - [ ] implement middleware (and move logging functionality)
 - [ ] configure autodeployment (GitHub Actions)
 - [ ] register the service in the [RapidAPI](https://rapidapi.com/products/enterprise-hub/) for public use
-
-# tbd
-- add gRPC interface
